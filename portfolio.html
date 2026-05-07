@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago Lima de Souza</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="header">
+
+        <div id="logo">
+            <h1>Tiago Lima de Souza</h1>
+        </div>
+    
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="sobreMim.html">Sobre mim</a>
+            <a href="formacao.html">Formação</a>
+            <a href="contato.html">Contato</a>
+            <button id="btn-tema">Modo Escuro</button>
+        </div>
+
+    </div>
+
+    <div id="content">
+
+        <div id="posts">
+
+            <!-- abertura postagem -->
+
+           <div class="post">
+    <h2>Portfólio</h2>
+    <span class="data-post">postado 04 maio 2026</span>
+    <img class="img-post" src="imagens/portfolio2.jpeg">
+    
+    <ul style="margin-left: 20px; line-height: 1.6;">
+        <li>
+            <strong>Lógica de Programação</strong> – IFSul<br>
+             Matéria que fiz no IFSUL no curso técnico em MEcatrônica.
+            <br><medium>Repositório de <a href="https://github.com/TcpSouza/Codigos-e-exercicios-desenvolvidos-durante-as-aulas-no-IFSul-2017." target="_blank">Fundamentos de Programação e C++</a>.</medium>
+            <br><medium>Repositório de <a href="https://github.com/TcpSouza/Codigos-e-exercicios-na-linguagem-C" target="_blank">Códigos e exercícios em C++</a>.</medium>
+        </li>
+        <br>
+        <li>
+            <strong>Sistemas Embarcados e Robótica</strong><br>
+             Para finalizar uma matéria no curso de mecatrônica, era necessário criar um projeto e o que saiu foi este Braço Robótico, no qual foi utilizado Arduino e servos motores.
+            <br><medium>Desenvolvimento de um <a href="https://github.com/TcpSouza/Projeto-Braco-Robotico-IFSUL" target="_blank">Braço Robótico</a> utilizando Arduino e servos motores.</medium>
+        </li>
+        <br>
+        <li>
+            <strong>Lógica e Algoritmos</strong> – Pronatec<br>
+            Curso que participei no SENAI, matéria focada em lógica e algoritmos, utilizando bastante as macros no Excel.
+            <br><medium>Histórico de aprendizado e <a href="https://github.com/TcpSouza/Aulas-Pronatec-2014" target="_blank">exercícios de lógica</a> (QuickBASIC).</medium>
+        </li>
+        <br>
+        <li>
+            <strong>Linguagem Python</strong><br>
+            Estou lendo o livro Curso Intensivo de Python (Eric Matthes) e fazendo os exercícios que ele propõe.
+            <br><medium>Resolução de problemas baseados no livro <a href="https://github.com/TcpSouza/Exercicios-em-Python" target="_blank">"Curso Intensivo de Python"</a>.</medium>
+        </li>
+    </ul>
+</div>
+            </div>
+
+            <!--fechamento postagem -->
+
+        </div>
+    
+        <div id="footer">
+            Todos os direitos reservados - Tiago Lima de Souza
+        </div>
+
+    </div>
+    <script>
+        const btnTema = document.getElementById('btn-tema');
+        
+        btnTema.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Troca o texto do botão
+            if (document.body.classList.contains('dark-mode')) {
+                btnTema.textContent = "☀️ Modo Claro";
+            } else {
+                btnTema.textContent = "🌙 Modo Escuro";
+            }
+        });
+    </script>
+</body>
+
+</html>

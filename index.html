@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago Lima de Souza</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="header">
+
+        <div id="logo">
+            <h1>Tiago Lima de Souza</h1>
+        </div>
+    
+        <div id="menu">
+            <a href="sobreMim.html">Sobre mim</a>
+            <a href="formacao.html">Formação</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html">Contato</a>
+            <button id="btn-tema">Modo Escuro</button>
+        </div>
+
+    </div>
+
+    <div id="content">
+
+        <div id="posts">
+
+            <!-- abertura postagem -->
+            <div class="post">
+                <h2>Sobre Mim</h2>
+                <span class="data-post">postado em 03 maio 2026</span>
+                <img class="img-post" src="imagens/eu.jpg">
+                <p>
+                    Uma breve apresentação a meu respeito.                </p>
+                <a href="sobreMim.html">Leia mais</a>
+            </div>
+
+            <div class="post">
+                <h2>Formação</h2>
+                <span class="data-post">postado em 03 maio 2026</span>
+                <img class="img-post" src="imagens/formacao.jpeg">
+                <p>
+                    Aqui eu apresento minha formação.
+                </p>
+                <a href="formacao.html">Leia mais</a>
+            </div>
+
+            <div class="post">
+                <h2>Portfólio</h2>
+                <span class="data-post">postado em 03 maio 2026</span>
+                <img class="img-post" src="imagens/portfolio.jpg">
+                <p>
+                    Meu portfólio no GitHub.
+                </p>
+                <a href="portfolio.html">Leia mais</a>
+            </div>
+
+            <div class="post">
+                <h2>Contato</h2>
+                <span class="data-post">postado em 03 maio 2026</span>
+                <img class="img-post" src="imagens/contato.jpg">
+                <p>
+                    Caso queira entrar em contato comigo.
+                </p>
+                <a href="contato.html">Leia mais</a>
+            </div>
+            <!--fechamento postagem -->
+
+        </div>
+    
+        <div id="footer">
+            Todos os direitos reservados - Tiago Lima de Souza
+        </div>
+
+    </div>
+    <script>
+        const btnTema = document.getElementById('btn-tema');
+        
+        btnTema.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // aqui faz a troca do botao
+            if (document.body.classList.contains('dark-mode')) {
+                btnTema.textContent = "☀️ Modo Claro";
+            } else {
+                btnTema.textContent = "🌙 Modo Escuro";
+            }
+        });
+    </script>
+</body>
+
+</html>

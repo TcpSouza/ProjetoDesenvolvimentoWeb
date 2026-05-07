@@ -1,0 +1,263 @@
+/*
+******limpar formatação******
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+******FORMATAÇÕES GENÉRICAS******
+*/
+body{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #c4c4c4;
+}
+h1{
+    color:#252525;
+    font-size: 40px;
+}
+h2{
+    color:#0ec454;
+}
+h3{
+    color:#565656;
+    background:#cccccc;
+    padding: 5px;
+}
+/*
+******HEADER******
+*/
+#header{
+    background-color: #0ec454;
+    padding: 15px;
+    text-align: center;
+}
+
+#logo,#menu{
+    padding: 10px;
+}
+
+#header a:link, #header a:visited{
+    color: white;
+    padding: 8px 12px;
+}
+
+#header a:hover{
+    color:#0ec454;
+    background: white;
+    text-decoration: none;
+}
+
+/*
+******CONTENT******
+*/
+ #content{
+    width: 920px;
+    margin: 0 auto; /* nessa parte o conteúdo principal é centralizado na tela*/
+    padding: 15px;
+ }
+
+ /*
+ ******POSTS******
+ */
+#posts{
+    width: 660px;
+    float: left; /* A coluna postagens é posta a esquerda */
+}
+
+.post{
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+    text-align: justify;
+}
+
+.data-post{
+    font-size: 13px;
+    border-bottom: 1px solid #0ec454;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.img-post{
+    width: 620px;
+}
+/*
+ ******RIGHT SIDE******
+ */
+
+ #right-side{
+    width: 240px;
+    float: right; /* A coluna lateral é colocada a direita */
+
+ }
+
+ .content-right{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+ }
+
+ .post-right{
+    font-size: 13px;
+    padding: 5px;
+    border-bottom: 1px dotted #cccccc;
+ }
+
+ /*
+ ******FORMATAÇÂO LINKS******
+ */
+ a{
+    text-decoration: none;
+ }
+ a:link, a:visited{
+    color:#0ec454
+ }
+ a:hover{
+    text-decoration: underline;
+ }
+
+ /*
+ ******FOOTER******
+ */
+ #footer{
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    color:#0ec454;
+ }
+
+ /*
+ ******FORMULÁRIO DE CONTATO******
+ */
+.contato-secao {
+    margin-top: 20px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block; 
+    font-weight: bold;
+    color: #565656;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.campo input, .campo textarea {
+    width: 50%; 
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px; 
+    font-family: inherit; 
+}
+
+/* Efeito ao clicar na caixa de texto */
+.campo input:focus, .campo textarea:focus {
+    outline: none;
+    border-color: #0ec454; /* Quando clica no campo a cor da borda muda */
+    box-shadow: 0 0 5px rgba(14, 196, 84, 0.2);
+}
+
+.botao-enviar {
+    background-color: #0ec454;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: #0ca345; 
+}
+
+.subtitulo {
+    color: #565656;
+    font-size: 15px;
+}
+
+/* Estilos para o Modo Escuro */
+body.dark-mode {
+    background-color: #1a1a1a; /* Transforma o fundo em tom escuro */
+    color: #f4f4f4; /* Torna o texto em braco */
+}
+
+body.dark-mode .post, 
+body.dark-mode #footer,
+body.dark-mode .content-right {
+    background-color: #2d2d2d; /* Fundo dos posts e lateral */
+    color: #f4f4f4;
+}
+
+body.dark-mode h1, 
+body.dark-mode h3,
+body.dark-mode .subtitulo,
+body.dark-mode .campo label {
+    color: #ffffff !important;
+}
+
+body.dark-mode .campo input, 
+body.dark-mode .campo textarea {
+    background-color: #3d3d3d; /* O interior das caixas de formulario fica em tom escuro */
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a !important;
+    color: #f4f4f4;
+}
+
+body.dark-mode .post, 
+body.dark-mode #footer {
+    background-color: #2d2d2d; /* Os blocos de conteudo ficam em tom escuro */
+    color: #f4f4f4;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #0ec454; 
+}
+/* Estilo do Botão de Alternar */
+#btn-tema {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #252525;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/*
+******AJUSTES DA TELA PARA DAR CERTO NO CELULAR******
+*/
+@media (max-width: 920px) {
+    #content {
+        width: 95%; /* Ajuste para ocupar a largura da tela no celular */
+    }
+
+    #posts, #right-side {
+        width: 100%; /* Ocupa totalmente a largura pelas colunas */
+        float: none;  /* Empilha os itens */
+    }
+
+    .img-post {
+        width: 100%;  /* Ajusta a imagem ao post */
+        height: auto;
+    }
+
+    .campo input, .campo textarea {
+        width: 100%; /* Faz a caixa de contato ocupar toda a linha quando usado no celular */
+    }
+}

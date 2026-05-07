@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header">
+
+        <div id="logo">
+            <h1>Tiago Lima de Souza</h1>
+        </div>
+    
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="formacao.html">Formação</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html">Contato</a>
+            <button id="btn-tema">Modo Escuro</button>
+        </div>
+
+    </div>
+
+    <div id="content">
+
+        <div id="posts">
+
+            <!-- abertura postagem -->
+            <div class="post">
+                <h2>Sobre Mim</h2>
+                <span class="data-post">postado em 03 maio 2026</span>
+                <img class="img-post" src="imagens/eu.jpg">
+                
+                <p style="font-size: 20px; line-height: 1.6;text-align: left;">
+                    Primeiramente olá a você que está lendo este post, meu nome é Tiago e tenho 40 anos.
+                    Nasci na cidade de Novo Hamburgo que fica no estado do Rio Grande do Sul, morei um tempo em Caxias do Sul que também fica no mesmo estado, mas acabei por retornar e morar em Novo Hamburgo.
+                    
+                 <img class="img-post" src="imagens/familia.jpg"> 
+                 <img class="img-post" src="imagens/trilha.jpg">  
+                    Casado e pai de uma menina linda de oito anos que amo demais.
+                    Curto demais a natureza, realizar trilhas e viajar com minha familia.
+                    <br></br>
+                    Sempre me interessei por tecnologia e por ver idéias digitais ganhando forma. A impressão 3D se tornou meu hobby principal porque une o lado criativo com a parte técnica de um jeito que eu gosto bastante.
+                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 15px 0;">
+        
+                    <img src="imagens/tecno1.jpeg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+                    <img src="imagens/tecno2.jpeg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+                    <img src="imagens/tecno3.jpg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+        
+                    <img src="imagens/tecno4.jpg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+                    <img src="imagens/tecno5.jpg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+                    <img src="imagens/tecno6.jpg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+        
+                    <img src="imagens/tecno7.jpg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+                    <img src="imagens/tecno8.jpg" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+                    
+
+    </div>    
+                </p>
+                
+            </div>
+
+            <!--fechamento postagem -->
+
+        </div>
+    
+        </div>
+
+        <div id="footer">
+            Todos os direitos reservados - Tiago Lima de Souza
+        </div>
+
+    </div>
+    <script>
+        const btnTema = document.getElementById('btn-tema');
+        
+        btnTema.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // aqui troca o botao
+            if (document.body.classList.contains('dark-mode')) {
+                btnTema.textContent = "☀️ Modo Claro";
+            } else {
+                btnTema.textContent = "🌙 Modo Escuro";
+            }
+        });
+    </script>
+</body>
+</html>

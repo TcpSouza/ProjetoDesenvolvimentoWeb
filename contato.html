@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago Lima de Souza</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="logo">
+            <h1>Tiago Lima de Souza</h1>
+        </div>
+    
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="sobreMim.html">Sobre mim</a>
+            <a href="formacao.html">Formação</a>
+            <a href="portfolio.html">Portfólio</a>
+            <button id="btn-tema">Modo Escuro</button>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="posts">
+            <div class="post">
+                <h2>Contato</h2>
+                <span class="data-post">postado em 03 maio 2026</span>
+                <img class="img-post" src="imagens/contato.jpg">
+                <p>
+                    Caso você queira entrar em contato comigo.<br>
+                    e-mail: tiagolsouza86@gmail.com<br>
+                    telefone: (51) 98471-1496<br>
+                    <a href="https://github.com/TcpSouza"><u>github</u></a>
+                </p>
+
+                <main class="container">
+                    <section class="contato-secao">
+                        <br>
+                        <p class="subtitulo"><strong>Para entrar em contato preencha o formulário abaixo:</strong></p>
+                        <br>
+
+                        <form action="#" method="post" class="formulario" id="meuFormulario">
+                            <div class="campo">
+                                <label for="nome">NOME :</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                            </div>
+
+                            <div class="campo"><br>
+                                <label for="email">E-MAIL :</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+
+                            <div class="campo">
+                                <br><label for="mensagem">MENSAGEM :</label><br>
+                                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Sua mensagem..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="botao-enviar">ENVIAR MENSAGEM</button>
+                        </form>
+                    </section>
+                </main>
+            </div>
+            </div>
+    
+        <div id="footer">
+            Todos os direitos reservados - Tiago Lima de Souza
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('meuFormulario');
+
+        form.addEventListener('submit', function(event) {
+            
+            event.preventDefault(); // a pagina é impedida de recarregar 
+            alert("Mensagem enviada com sucesso!");
+
+            form.reset(); // o campos de envio são limpos
+        });
+    </script>
+    <script>
+        const btnTema = document.getElementById('btn-tema');
+        
+        btnTema.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // aqui troca o texto do botão
+            if (document.body.classList.contains('dark-mode')) {
+                btnTema.textContent = "☀️ Modo Claro";
+            } else {
+                btnTema.textContent = "🌙 Modo Escuro";
+            }
+        });
+    </script>
+</body>
+</html>
